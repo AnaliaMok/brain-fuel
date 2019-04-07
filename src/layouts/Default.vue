@@ -1,10 +1,10 @@
 <template>
   <div class="container mx-auto">
-    <header class="header py-4">
+    <header class="header mb-8 py-4">
       <strong>
-        <g-link to="/">Gridsome</g-link>
+        <g-link to="/">BrainFuel</g-link>
       </strong>
-      <nav class="nav">
+      <nav class="nav font-display">
         <g-link class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/about">About</g-link>
       </nav>
@@ -15,8 +15,8 @@
 
 <style>
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -34,7 +34,6 @@ nav[role='navigation'] a {
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
 }
 .nav__link {
   margin-left: 20px;
