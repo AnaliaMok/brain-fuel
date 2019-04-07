@@ -1,6 +1,6 @@
 <template>
-  <div class="layout">
-    <header class="header">
+  <div class="container mx-auto">
+    <header class="header py-4">
       <strong>
         <g-link to="/">Gridsome</g-link>
       </strong>
@@ -15,27 +15,22 @@
 
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
 }
 
 img {
   max-width: 100%;
 }
 
-nav[role="navigation"] {
+nav[role='navigation'] {
   text-align: center;
 }
-nav[role="navigation"] a {
+nav[role='navigation'] a {
   display: inline-block;
-  margin: 1.0em 0.75em 2.0em;
+  margin: 1em 0.75em 2em;
 }
 
-.layout {
-  max-width: 600px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
 .header {
   display: flex;
   justify-content: space-between;

@@ -14,6 +14,9 @@ module.exports = {
           post_tag: "/tag/:slug" // adds route for "post_tag" post type (Optional)
         }
       }
+    },
+    {
+      use: "gridsome-plugin-tailwindcss"
     }
   ]
 };
