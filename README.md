@@ -1,35 +1,12 @@
-# WordPress starter for Gridsome
+# BrainFuel
 
-## Install
-`gridsome create my-gridsome-project wordpress`
+(__Fake__) Digital web development agency focused on spreading knowledge on all things web/software development
 
-## Guide
+## Project Setup
 
-Add your WordPress URL to the plugin options.
+1. Install the gridsome CLI:
+  * Via NPM: `npm install --global @gridsome/cli`
+2. Install node modules via `npm install`
+3. Create a .env file using the .env.sample file as a template. Plugin your WordPress source.
 
-```js
-// gridsome.config.js
-
-module.exports = {
-  plugins: [
-    {
-      use: '@gridsome/source-wordpress',
-      options: {
-        baseUrl: 'YOUR_WEBSITE_URL', // required
-        typeName: 'WordPress', // GraphQL schema name (Optional)
-        perPage: 100, // How many posts to load from server per request (Optional)
-        concurrent: 10, // How many requests to run simultaneously (Optional)
-        routes: {
-          post: '/:year/:month/:day/:slug', //adds route for "post" post type (Optional)
-          post_tag: '/tag/:slug' // adds route for "post_tag" post type (Optional)
-        }
-      }
-    }
-  ]
-}
-
-```
-
-## Included templates
-
-This starter includes basic templates for categories, tags and posts.
+NOTE: A lot of this project will be pre-configured for my WordPress source so some pages may not work for you.
