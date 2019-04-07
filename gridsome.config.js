@@ -1,11 +1,11 @@
 module.exports = {
-  siteName: "Gridsome",
-  siteDescription: "A WordPress starter for Gridsome",
+  siteName: "BrainFuel",
+  siteDescription: "Fake digital agency focused on web development.",
   plugins: [
     {
       use: "@gridsome/source-wordpress",
       options: {
-        baseUrl: "https://dev-am-wp-repo.pantheonsite.io/",
+        baseUrl: process.env.WORDPRESS_SOURCE,
         typeName: "WordPress", // GraphQL schema name (Optional)
         perPage: 100, // How many posts to load from server per request (Optional)
         concurrent: 10, // How many requests to run simultaneously (Optional)
