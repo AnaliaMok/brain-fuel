@@ -30,16 +30,6 @@ let defaultConfig = require('tailwindcss/defaultConfig')()
 |-------------------------------------------------------------------------------
 | Colors                                    https://tailwindcss.com/docs/colors
 |-------------------------------------------------------------------------------
-|
-| Here you can specify the colors used in your project. To get you started,
-| we've provided a generous palette of great looking colors that are perfect
-| for prototyping, but don't hesitate to change them for your project. You
-| own these colors, nothing will break if you change everything about them.
-|
-| We've used literal color names ("red", "blue", etc.) for the default
-| palette, but if you'd rather use functional names like "primary" and
-| "secondary", or even a numeric scale like "100" and "200", go for it.
-|
 */
 
 let colors = {
@@ -133,13 +123,6 @@ module.exports = {
   |-----------------------------------------------------------------------------
   | Colors                                  https://tailwindcss.com/docs/colors
   |-----------------------------------------------------------------------------
-  |
-  | The color palette defined above is also assigned to the "colors" key of
-  | your Tailwind config. This makes it easy to access them in your CSS
-  | using Tailwind's config helper. For example:
-  |
-  | .error { color: config('colors.red') }
-  |
   */
 
   colors: colors,
@@ -148,19 +131,6 @@ module.exports = {
   |-----------------------------------------------------------------------------
   | Screens                      https://tailwindcss.com/docs/responsive-design
   |-----------------------------------------------------------------------------
-  |
-  | Screens in Tailwind are translated to CSS media queries. They define the
-  | responsive breakpoints for your project. By default Tailwind takes a
-  | "mobile first" approach, where each screen size represents a minimum
-  | viewport width. Feel free to have as few or as many screens as you
-  | want, naming them in whatever way you'd prefer for your project.
-  |
-  | Tailwind also allows for more complex screen definitions, which can be
-  | useful in certain situations. Be sure to see the full responsive
-  | documentation for a complete list of options.
-  |
-  | Class name: .{screen}:{utility}
-  |
   */
 
   screens: {
@@ -174,19 +144,6 @@ module.exports = {
   |-----------------------------------------------------------------------------
   | Fonts                                    https://tailwindcss.com/docs/fonts
   |-----------------------------------------------------------------------------
-  |
-  | Here is where you define your project's font stack, or font families.
-  | Keep in mind that Tailwind doesn't actually load any fonts for you.
-  | If you're using custom fonts you'll need to import them prior to
-  | defining them here.
-  |
-  | By default we provide a native font stack that works remarkably well on
-  | any device or OS you're using, since it just uses the default fonts
-  | provided by the platform.
-  |
-  | Class name: .font-{name}
-  | CSS property: font-family
-  |
   */
 
   fonts: {
@@ -316,30 +273,38 @@ module.exports = {
   |-----------------------------------------------------------------------------
   | Text colors                         https://tailwindcss.com/docs/text-color
   |-----------------------------------------------------------------------------
-  |
-  | Here is where you define your text colors. By default these use the
-  | color palette we defined above, however you're welcome to set these
-  | independently if that makes sense for your project.
-  |
-  | Class name: .text-{color}
-  | CSS property: color
-  |
   */
 
-  textColors: colors,
+  textColors: {
+    black: colors['black'],
+    'grey-darkest': colors['grey-darkest'],
+    'grey-darker': colors['grey-darker'],
+    'grey-dark': colors['grey-dark'],
+    grey: colors['grey'],
+    'grey-light': colors['grey-light'],
+    'grey-lighter': colors['grey-lighter'],
+    'grey-lightest': colors['grey-lightest'],
+    white: colors['white'],
+    'blue-darkest': colors['blue-darkest'],
+    'blue-darker': colors['blue-darker'],
+    'blue-dark': colors['blue-dark'],
+    blue: colors['blue'],
+    'blue-light': colors['blue-light'],
+    'blue-lighter': colors['blue-lighter'],
+    'blue-lightest': colors['blue-lightest'],
+    'indigo-darkest': colors['indigo-darkest'],
+    'indigo-darker': colors['indigo-darker'],
+    'indigo-dark': colors['indigo-dark'],
+    indigo: colors['indigo'],
+    'indigo-light': colors['indigo-light'],
+    'indigo-lighter': colors['indigo-lighter'],
+    'indigo-lightest': colors['indigo-lightest']
+  },
 
   /*
   |-----------------------------------------------------------------------------
   | Background colors             https://tailwindcss.com/docs/background-color
   |-----------------------------------------------------------------------------
-  |
-  | Here is where you define your background colors. By default these use
-  | the color palette we defined above, however you're welcome to set
-  | these independently if that makes sense for your project.
-  |
-  | Class name: .bg-{color}
-  | CSS property: background-color
-  |
   */
 
   backgroundColors: colors,
@@ -348,14 +313,6 @@ module.exports = {
   |-----------------------------------------------------------------------------
   | Background sizes               https://tailwindcss.com/docs/background-size
   |-----------------------------------------------------------------------------
-  |
-  | Here is where you define your background sizes. We provide some common
-  | values that are useful in most projects, but feel free to add other sizes
-  | that are specific to your project here as well.
-  |
-  | Class name: .bg-{size}
-  | CSS property: background-size
-  |
   */
 
   backgroundSize: {
@@ -390,18 +347,6 @@ module.exports = {
   |-----------------------------------------------------------------------------
   | Border colors                     https://tailwindcss.com/docs/border-color
   |-----------------------------------------------------------------------------
-  |
-  | Here is where you define your border colors. By default these use the
-  | color palette we defined above, however you're welcome to set these
-  | independently if that makes sense for your project.
-  |
-  | Take note that border colors require a special "default" value set
-  | as well. This is the color that will be used when you do not
-  | specify a border color.
-  |
-  | Class name: .border-{color}
-  | CSS property: border-color
-  |
   */
 
   borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
