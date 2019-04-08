@@ -1,15 +1,22 @@
 <template>
-  <div class="container mx-auto">
-    <header class="header mb-8 py-4">
-      <strong>
-        <g-link to="/">BrainFuel</g-link>
-      </strong>
-      <nav class="nav font-display">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
-      </nav>
+  <div class="bg-grey-lightest">
+    <header class="mb-8 px-4 py-6">
+      <div class="container mx-auto flex justify-between">
+        <strong>
+          <g-link to="/" class="font-display text-2xl text-indigo-dark no-underline">BrainFuel</g-link>
+        </strong>
+        <nav class="nav font-display">
+          <g-link class="nav__link no-underline text-indigo-dark" to="/">Home</g-link>
+          <g-link class="nav__link no-underline text-indigo-dark" to="/about">About</g-link>
+        </nav>
+      </div>
     </header>
-    <slot/>
+    <main class="container mx-auto">
+      <slot/>
+    </main>
+    <footer class="container mx-auto px-4 py-8 font-display text-center text-grey-darkest">
+      &copy; 2019 BrainFuel
+    </footer>
   </div>
 </template>
 
@@ -31,10 +38,6 @@ nav[role='navigation'] a {
   margin: 1em 0.75em 2em;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-}
 .nav__link {
   margin-left: 20px;
 }

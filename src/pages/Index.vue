@@ -1,9 +1,10 @@
 <template>
   <Layout>
-    <h1 class="mb-8">Welcome to my blog :)</h1>
-    <ul class="post-list">
-      <li v-for="{ node } in $page.allWordPressPost.edges" :key="node.id">
-        <Post :post="node" />
+    <h1 class="mx-4 mb-4 font-display text-indigo-darker">Welcome to BrainFuel's Blog!</h1>
+    <p class="mx-4 mb-8 font-sans text-black">This is a test site to combine Gridsome, WordPress and TailwindCSS</p>
+    <ul class="post-list container mx-auto list-reset flex flex-wrap">
+      <li v-for="{ node } in $page.allWordPressPost.edges" :key="node.id" class="sm:w-full md:w-1/2 lg:w-1/3">
+        <PostCard :post="node" />
       </li>
     </ul>
     <Pager :info="$page.allWordPressPost.pageInfo"/>
@@ -12,7 +13,7 @@
 
 <page-query>
 query Home ($page: Int) {
-  allWordPressPost (page: $page, perPage: 10) @paginate {
+  allWordPressPost (page: $page, perPage: 9) @paginate {
     pageInfo {
       totalPages
       currentPage
@@ -22,7 +23,11 @@ query Home ($page: Int) {
         id
         title
         path
-        excerpt
+        featuredMedia {
+          url
+          width
+          height
+        }
       }
     }
   }
@@ -32,11 +37,12 @@ query Home ($page: Int) {
 <script>
 import { Pager } from 'gridsome'
 import Post from '~/components/Post.vue'
+import PostCard from '~/components/PostCard.vue'
 
 export default {
   components: {
     Pager,
-    Post
+    PostCard
   },
   metaInfo: {
     title: 'Home'

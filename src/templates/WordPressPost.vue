@@ -1,17 +1,17 @@
 <template>
-  <Layout>
-    <h1 v-html="$page.wordPressPost.title"/>
+  <Layout class="wp-post text-center">
+    <h1 v-html="$page.wordPressPost.title" class="mb-4 font-display text-indigo-darker" />
     <img
       v-if="$page.wordPressPost.featuredMedia"
       :src="$page.wordPressPost.featuredMedia.url"
       :width="$page.wordPressPost.featuredMedia.width"
       :alt="$page.wordPressPost.featuredMedia.title"
     />
-    <div v-html="$page.wordPressPost.content" class="py-8" />
+    <div v-html="$page.wordPressPost.content" class="py-8 text-left text-base leading-normal font-sans text-black" />
     <template v-if="$page.wordPressPost.categories.length">
       <h4>Posted in</h4>
-      <ul class="list categories">
-        <li v-for="category in $page.wordPressPost.categories" :key="category.id" >
+      <ul class="list categories list-reset">
+        <li v-for="category in $page.wordPressPost.categories" :key="category.id" class="list-reset">
           <g-link :to="category.path">{{ category.title }}</g-link>
         </li>
       </ul>
@@ -48,24 +48,26 @@ export default {
 }
 </script>
 
-<style>
-ul.list {
-  list-style: none;
-  padding: 0;
+<style scoped>
+.wp-post blockquote a,
+.wp-post a {
+  color: #2779bd;
 }
-ul.list li {
-  display: inline-block;
-  margin-right: 0.25em;
+
+.wp-post h2,
+.wp-post h3,
+.wp-post h4 {
+  font-family: fira-sans, sans-serif;
 }
-ul.list.tags li a {
-  padding: 0.25em 0.5em;
-  background-color: lightgray;
+
+.wp-post img {
+  display: block;
+  max-width: 80%;
+  margin: 0 auto;
 }
-ul.list.categories li:after {
-  content: ',';
-  display: inline-block;
-}
-ul.list li:last-child:after {
-  content: '';
+
+.wp-post ul,
+.wp-post ol {
+  margin: 1rem 0;
 }
 </style>
