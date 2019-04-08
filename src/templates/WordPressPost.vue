@@ -1,5 +1,5 @@
 <template>
-  <Layout class="wp-post text-center">
+  <Layout class="text-center">
     <h1 v-html="$page.wordPressPost.title" class="mb-4 font-display text-indigo-darker" />
     <img
       v-if="$page.wordPressPost.featuredMedia"
@@ -7,7 +7,7 @@
       :width="$page.wordPressPost.featuredMedia.width"
       :alt="$page.wordPressPost.featuredMedia.title"
     />
-    <div v-html="$page.wordPressPost.content" class="py-8 text-left text-base leading-normal font-sans text-black" />
+    <div v-html="$page.wordPressPost.content" class="wp-post py-8 text-left text-base leading-normal font-sans text-black" />
     <template v-if="$page.wordPressPost.categories.length">
       <h4>Posted in</h4>
       <ul class="list categories list-reset">
@@ -49,25 +49,30 @@ export default {
 </script>
 
 <style scoped>
-.wp-post blockquote a,
-.wp-post a {
+.wp-post >>> a {
   color: #2779bd;
 }
 
-.wp-post h2,
-.wp-post h3,
-.wp-post h4 {
+.wp-post >>> h2,
+.wp-post >>> h3,
+.wp-post >>> h4 {
+  color: #3d4852;
   font-family: fira-sans, sans-serif;
+  margin: 1rem 0;
 }
 
-.wp-post img {
+.wp-post >>> img {
   display: block;
-  max-width: 80%;
-  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
 
-.wp-post ul,
-.wp-post ol {
+.wp-post >>> ul,
+.wp-post >>> ol,
+.wp-post >>> p {
   margin: 1rem 0;
 }
 </style>

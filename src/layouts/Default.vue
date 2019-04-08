@@ -11,7 +11,7 @@
         </nav>
       </div>
     </header>
-    <main class="container mx-auto">
+    <main class="container mx-auto px-4 lg:px-0">
       <slot/>
     </main>
     <footer class="container mx-auto px-4 py-8 font-display text-center text-grey-darkest">
