@@ -7,7 +7,7 @@
         <PostCard :post="node" />
       </li>
     </ul>
-    <Pager :info="$page.allWordPressPost.pageInfo"/>
+    <Pager :info="$page.allWordPressPost.pageInfo" class="font-sans pager" />
   </Layout>
 </template>
 

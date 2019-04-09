@@ -48,4 +48,14 @@ nav[role='navigation'] a {
 .post-list li {
   padding: 1em 0;
 }
+
+.pager a {
+  color: #1c3d5a;
+  font-size: 1.125rem;
+  text-decoration: none;
+}
+.pager a.active {
+  color: #9561e2;
+  font-weight: 600;
+}
 </style>

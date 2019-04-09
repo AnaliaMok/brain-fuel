@@ -9,10 +9,10 @@
     />
     <div v-html="$page.wordPressPost.content" class="wp-post py-8 text-left text-base leading-normal font-sans text-black" />
     <template v-if="$page.wordPressPost.categories.length">
-      <h4>Posted in</h4>
+      <h4 class="text-display text-grey-darkest">Posted in</h4>
       <ul class="list categories list-reset">
         <li v-for="category in $page.wordPressPost.categories" :key="category.id" class="list-reset">
-          <g-link :to="category.path">{{ category.title }}</g-link>
+          <g-link :to="category.path" class="text-blue-dark">{{ category.title }}</g-link>
         </li>
       </ul>
     </template>

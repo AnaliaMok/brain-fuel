@@ -60,3 +60,14 @@
   * @import "utilities/background-patterns";
   * @import "utilities/skew-transforms";
   */
+
+/* WordPress Editor Classes */
+.alignleft {
+  @apply text-left;
+}
+.aligncenter {
+  @apply text-center;
+}
+.alignright {
+  @apply text-right;
+}

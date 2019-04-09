@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1>Tag: {{ $page.wordPressPostTag.title }} </h1>
+    <h1 class="mx-4 mb-4 font-display text-indigo-darker sm:text-center lg:text-left">Tag: {{ $page.wordPressPostTag.title }} </h1>
     <ul class="post-list">
       <li v-for="{ node } in $page.wordPressPostTag.belongsTo.edges" :key="node.id">
         <Post :post="node" />
@@ -43,7 +43,7 @@ export default {
     Pager,
     Post
   },
-  metaInfo () {
+  metaInfo() {
     return {
       title: this.$page.wordPressPostTag.title
     }
