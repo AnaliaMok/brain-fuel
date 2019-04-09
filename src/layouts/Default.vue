@@ -5,9 +5,12 @@
         <strong>
           <g-link to="/" class="font-display text-2xl text-indigo-dark no-underline">BrainFuel</g-link>
         </strong>
-        <nav class="nav font-display">
+        <nav class="nav font-display flex items-center">
           <g-link class="nav__link no-underline text-indigo-dark" to="/">Home</g-link>
           <g-link class="nav__link no-underline text-indigo-dark" to="/about">About</g-link>
+          <a href="https://github.com/AnaliaMok" class="w-8 h-8 ml-4 text-indigo-dark hover:text-purple">
+            <GitHubSquare class="max-w-full max-h-full fill-current text-indigo-dark"/>
+          </a>
         </nav>
       </div>
     </header>
@@ -19,6 +22,16 @@
     </footer>
   </div>
 </template>
+
+<script>
+import GitHubSquare from '~/assets/svgs/github-square.svg'
+
+export default {
+  components: {
+    GitHubSquare
+  }
+}
+</script>
 
 <style>
 body {
@@ -40,13 +53,6 @@ nav[role='navigation'] a {
 
 .nav__link {
   margin-left: 20px;
-}
-.post-list {
-  list-style: none;
-  padding-left: 0;
-}
-.post-list li {
-  padding: 1em 0;
 }
 
 .pager a {
