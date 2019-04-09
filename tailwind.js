@@ -428,6 +428,7 @@ module.exports = {
 
   minWidth: {
     '0': '0',
+    '768': '768px',
     full: '100%'
   },
 
@@ -439,6 +440,7 @@ module.exports = {
 
   minHeight: {
     '0': '0',
+    '512': '512px',
     full: '100%',
     screen: '100vh'
   },

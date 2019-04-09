@@ -7,9 +7,11 @@
         :title="post.title"
         width="768"
         height="512"
+        class="bg-grey"
       />
     </g-link>
     <div class="p-4 bg-white ">
+      <span class="block font-display mb-2 text-blue-dark text-base">{{ formatDate(post.date) }}</span>
       <h2 v-html="post.title" class="font-display text-2xl text-black mb-2" />
       <g-link :to="post.path" class="inline-block my-2 text-blue-dark no-underline">
         Read More
@@ -33,6 +35,19 @@ export default {
         width: 768,
         height: 512
       }
+    }
+  },
+  methods: {
+    formatDate(dateString) {
+      if (dateString.length) {
+        const dateObject = new Date(dateString)
+        const date = `${this.getMonth(
+          dateObject.getMonth()
+        )} ${dateObject.getDate()}, ${dateObject.getFullYear()}`
+
+        return date
+      }
+      return ''
     }
   }
 }
