@@ -14,7 +14,7 @@
 query Tag ($path: String, $page: Int) {
   wordPressPostTag (path: $path) {
     title
-    belongsTo (page: $page, perPage: 10) @paginate {
+    belongsTo (page: $page, perPage: 9) @paginate {
       pageInfo {
         totalPages
         currentPage

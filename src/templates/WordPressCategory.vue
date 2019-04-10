@@ -14,7 +14,7 @@
 query Category ($path: String, $page: Int) {
   wordPressCategory (path: $path) {
     title
-    belongsTo (page: $page, perPage: 10) @paginate {
+    belongsTo (page: $page, perPage: 9) @paginate {
       pageInfo {
         totalPages
         currentPage
