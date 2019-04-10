@@ -29,6 +29,11 @@ query Home ($page: Int) {
           width
           height
         }
+        categories {
+          id
+          title
+          path
+        }
       }
     }
   }

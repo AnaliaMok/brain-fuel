@@ -2,11 +2,13 @@
   <Layout class="text-center">
     <h1 v-html="$page.wordPressPost.title" class="mb-4 font-display text-indigo-darker" />
     <h3 class="mb-8 font-display text-grey-darkest text-center">
-      <ul class="inline-block list categories list-reset">
-        <li v-for="category in $page.wordPressPost.categories" :key="category.id" class="list-reset">
-          <g-link :to="category.path" class="text-blue-dark no-underline hover:underline hover:text-blue">{{ category.title }}</g-link>
-        </li>
-      </ul>
+      <template v-if="$page.wordPressPost.categories.length">
+        <ul class="inline-block list categories list-reset">
+          <li v-for="category in $page.wordPressPost.categories" :key="category.id" class="list-reset">
+            <g-link :to="category.path" class="text-blue-dark no-underline hover:underline hover:text-blue">{{ category.title }}</g-link>
+          </li>
+        </ul>
+      </template>
       &#8226;
       <span class="inline-block">{{ formatDate($page.wordPressPost.date) }}</span>
     </h3>
@@ -17,14 +19,6 @@
       :alt="$page.wordPressPost.featuredMedia.title"
     />
     <div v-html="$page.wordPressPost.content" class="wp-post py-8 text-left text-base leading-normal font-sans text-black" />
-    <template v-if="$page.wordPressPost.categories.length">
-      <h4 class="text-display text-grey-darkest">Posted in</h4>
-      <ul class="list categories list-reset">
-        <li v-for="category in $page.wordPressPost.categories" :key="category.id" class="list-reset">
-          <g-link :to="category.path" class="text-blue-dark">{{ category.title }}</g-link>
-        </li>
-      </ul>
-    </template>
   </Layout>
 </template>
 
