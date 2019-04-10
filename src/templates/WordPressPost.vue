@@ -65,6 +65,14 @@ export default {
   margin: 1rem 0;
 }
 
+.wp-post >>> h3 {
+  color: #5661b3;
+}
+
+.wp-post >>> h4 {
+  color: #191e38;
+}
+
 .wp-post >>> img {
   display: block;
 

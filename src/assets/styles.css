@@ -65,9 +65,12 @@
 .alignleft {
   @apply text-left;
 }
+
 .aligncenter {
   @apply text-center;
+  margin: 0 auto;
 }
+
 .alignright {
   @apply text-right;
 }
