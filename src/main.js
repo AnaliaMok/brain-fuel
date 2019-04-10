@@ -22,6 +22,17 @@ export default function(Vue) {
         ]
 
         return monthNames[month]
+      },
+      formatDate(dateString) {
+        if (dateString.length) {
+          const dateObject = new Date(dateString)
+          const date = `${this.getMonth(
+            dateObject.getMonth()
+          )} ${dateObject.getDate()}, ${dateObject.getFullYear()}`
+
+          return date
+        }
+        return ''
       }
     }
   })

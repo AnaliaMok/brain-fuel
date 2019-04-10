@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="mx-4 mb-4 font-display text-indigo-darker sm:text-center lg:text-left">Category: {{ $page.wordPressCategory.title }} </h1>
+    <h1 class="mx-4 mb-4 font-display text-indigo-darker sm:text-center lg:text-left">{{ $page.wordPressCategory.title }} </h1>
     <ul class="post-list container mx-auto list-reset flex flex-wrap">
       <li v-for="{ node } in $page.wordPressCategory.belongsTo.edges" :key="node.id" class="sm:w-full md:w-1/2 lg:w-1/3 mb-6">
         <PostCard :post="node" />

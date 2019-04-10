@@ -36,19 +36,6 @@ export default {
         height: 512
       }
     }
-  },
-  methods: {
-    formatDate(dateString) {
-      if (dateString.length) {
-        const dateObject = new Date(dateString)
-        const date = `${this.getMonth(
-          dateObject.getMonth()
-        )} ${dateObject.getDate()}, ${dateObject.getFullYear()}`
-
-        return date
-      }
-      return ''
-    }
   }
 }
 </script>

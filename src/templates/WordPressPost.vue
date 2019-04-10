@@ -1,6 +1,15 @@
 <template>
   <Layout class="text-center">
     <h1 v-html="$page.wordPressPost.title" class="mb-4 font-display text-indigo-darker" />
+    <h3 class="mb-8 font-display text-grey-darkest text-center">
+      <ul class="inline-block list categories list-reset">
+        <li v-for="category in $page.wordPressPost.categories" :key="category.id" class="list-reset">
+          <g-link :to="category.path" class="text-blue-dark no-underline hover:underline hover:text-blue">{{ category.title }}</g-link>
+        </li>
+      </ul>
+      &#8226;
+      <span class="inline-block">{{ formatDate($page.wordPressPost.date) }}</span>
+    </h3>
     <img
       v-if="$page.wordPressPost.featuredMedia"
       :src="$page.wordPressPost.featuredMedia.url"
@@ -24,6 +33,7 @@ query Post ($path: String!) {
   wordPressPost (path: $path) {
     title
     content
+    date
     featuredMedia {
       url
       width
