@@ -7,6 +7,7 @@
         <PostCard :post="node" />
       </li>
     </ul>
+    <ScrollToTopButton />
     <Pager :info="$page.allWordPressPost.pageInfo" class="font-sans pager" />
   </Layout>
 </template>
@@ -44,14 +45,23 @@ query Home ($page: Int) {
 import { Pager } from 'gridsome'
 import Post from '~/components/Post.vue'
 import PostCard from '~/components/PostCard.vue'
+import ScrollToTopButton from '~/components/ScrollToTopButton.vue'
 
 export default {
   components: {
     Pager,
-    PostCard
+    PostCard,
+    ScrollToTopButton
   },
   metaInfo: {
     title: 'Home'
+  },
+  data() {
+    return {
+      currentCategory: []
+    }
   }
 }
 </script>
+
+

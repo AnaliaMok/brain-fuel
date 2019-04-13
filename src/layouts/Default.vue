@@ -8,7 +8,7 @@
         <nav class="nav font-display flex items-center">
           <g-link class="nav__link no-underline text-indigo-dark" to="/">Home</g-link>
           <g-link class="nav__link no-underline text-indigo-dark" to="/about">About</g-link>
-          <a href="https://github.com/AnaliaMok" class="w-8 h-8 ml-4 text-indigo-dark hover:text-purple">
+          <a href="https://github.com/AnaliaMok/brain-fuel" class="w-8 h-8 ml-4 text-indigo-dark hover:text-purple">
             <GitHubSquare class="max-w-full max-h-full fill-current text-indigo-dark"/>
           </a>
         </nav>

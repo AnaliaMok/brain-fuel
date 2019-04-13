@@ -19,6 +19,7 @@
       :alt="$page.wordPressPost.featuredMedia.title"
     />
     <div v-html="$page.wordPressPost.content" class="wp-post py-8 text-left text-base leading-normal font-sans text-black" />
+    <ScrollToTopButton />
   </Layout>
 </template>
 
@@ -43,7 +44,12 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
+import ScrollToTopButton from '~/components/ScrollToTopButton.vue'
+
 export default {
+  components: {
+    ScrollToTopButton
+  },
   metaInfo() {
     return {
       title: this.$page.wordPressPost.title

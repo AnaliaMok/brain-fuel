@@ -1,9 +1,21 @@
 <template>
-  <Layout>
-    <h1>About me</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+  <Layout class="about">
+    <h1 class="mb-4 font-display text-indigo-darker sm:text-center lg:text-left">{{ $static.page.title }}</h1>
+    <div class="text-black font-sans" v-html="$static.page.content"></div>
   </Layout>
 </template>
+
+<static-query>
+query AboutPage {
+  page: wordPressPage(path:"/pages/about"){
+    title
+    content
+    featuredMedia {
+      url
+    }
+  }
+}
+</static-query>
 
 <script>
 export default {
@@ -12,3 +24,23 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.about >>> p,
+.about >>> ul {
+  margin-bottom: 1rem;
+}
+
+.about >>> h2,
+.about >>> h3,
+.about >>> h4 {
+  color: #3d4852;
+  font-family: fira-sans, sans-serif;
+  margin: 1rem 0;
+}
+
+.about >>> a {
+  color: #2779bd;
+}
+</style>
+
