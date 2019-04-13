@@ -1,6 +1,10 @@
-# BrainFuel
+[![Netlify Status](https://api.netlify.com/api/v1/badges/edbc90db-e677-4430-a40e-2a5565d0e66b/deploy-status)](https://app.netlify.com/sites/brain-fuel-blog/deploys)
 
-(__Fake__) Digital web development agency focused on spreading knowledge on all things web/software development
+# BrainFuel Blog
+
+(__Fake__) Blog site for a digital web development agency focused on spreading knowledge on all things web/software development
+
+Hosted on Netlify: [https://brain-fuel-blog.netlify.com/](https://brain-fuel-blog.netlify.com/)
 
 ## Project Setup
 
